@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09051f">
+  <title>Devastated Engineers | Cosmic Crew</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars stars-one"></div><div class="stars stars-two"></div>
+  <div class="nebula nebula-one"></div><div class="nebula nebula-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">✦</span> DE<span class="brand-dot">.</span></a>
+    <nav>
+      <a href="#home">Home</a><a href="#crew">The Crew</a><a href="#vault">Crew Vault</a><a href="#thoughts">Thoughts</a>
+    </nav>
+    <button class="login-trigger" id="openLogin">Crew Login ↗</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> FIVE MINDS · ONE UNIVERSE</div>
+        <h1>DEVASTATED<br><span>ENGINEERS</span></h1>
+        <p class="hero-sub">A little chaos. A lot of ambition.<br>Somewhere between deadlines and the stars.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#crew">Meet the crew <span>↓</span></a>
+          <a class="text-btn" href="#about">Explore our universe ↗</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>05</strong><span>CREW MEMBERS</span></div>
+          <div><strong>∞</strong><span>BIG IDEAS</span></div>
+          <div><strong>01</strong><span>COSMIC CHAOS</span></div>
+        </div>
+      </div>
+      <div class="orbit-art" aria-label="Decorative galaxy illustration">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+        <div class="planet planet-main"><span>DE</span></div>
+        <div class="planet planet-small planet-pink"></div><div class="planet planet-small planet-blue"></div>
+        <div class="orbit-label label-top">EST. IN THE CHAOS</div><div class="orbit-label label-bottom">CUET × KUET</div>
+        <span class="spark spark-a">✦</span><span class="spark spark-b">✧</span><span class="spark spark-c">✦</span>
+      </div>
+      <div class="scroll-cue">SCROLL TO EXPLORE <span>⌄</span></div>
+    </section>
+
+    <section class="crew-section section-wrap" id="crew">
+      <div class="section-heading">
+        <div><div class="eyebrow">THE PEOPLE BEHIND THE CHAOS</div><h2>Meet the <span>crew.</span></h2></div>
+        <p>Five different paths. One shared orbit.<br>Tap a profile to discover the legend.</p>
+      </div>
+      <div class="crew-grid" id="crewGrid"></div>
+    </section>
+
+    <section class="workspace-section section-wrap" id="vault">
+      <div class="section-heading">
+        <div><div class="eyebrow">PERSONAL SPACE · LOCAL DEMO</div><h2>Crew <span>Vault.</span></h2></div>
+        <p>Keep your own profile notes and routines.<br>Choose your name through Crew Login first.</p>
+      </div>
+      <div class="privacy-note"><strong>Privacy notice:</strong> this demo saves data only in this browser. Name-only login is not secure authentication. Do not enter real phone numbers, home addresses, or family details on a public GitHub Pages site.</div>
+      <div id="vaultLocked" class="workspace-panel"><p>Log in with your crew name to open your personal workspace.</p><button class="primary-btn" type="button" id="vaultLoginBtn">Crew Login ↗</button></div>
+      <form id="vaultForm" class="workspace-panel form-grid" hidden>
+        <div class="workspace-title"><div><div class="eyebrow">PRIVATE TO THIS BROWSER ONLY</div><h3 id="vaultMemberTitle">Member details</h3></div><span class="save-state" id="vaultSaveState">Not saved</span></div>
+        <label>Father's name<input name="father" maxlength="100" autocomplete="off" placeholder="Optional"></label>
+        <label>Mother's name<input name="mother" maxlength="100" autocomplete="off" placeholder="Optional"></label>
+        <label>Mobile number<input name="mobile" maxlength="30" autocomplete="off" inputmode="tel" placeholder="Avoid real number on public sites"></label>
+        <label>Present address<textarea name="presentAddress" maxlength="300" rows="2" placeholder="Optional"></textarea></label>
+        <label>Permanent address<textarea name="permanentAddress" maxlength="300" rows="2" placeholder="Optional"></textarea></label>
+        <label>Daily routine / work<textarea name="dailyHabits" maxlength="1000" rows="3" placeholder="Study, work, hobbies, daily routine…"></textarea></label>
+        <label>Habits I want to improve<textarea name="improveHabits" maxlength="1000" rows="3" placeholder="Write constructively; keep it respectful."></textarea></label>
+        <label>Other notes<textarea name="notes" maxlength="1000" rows="3" placeholder="Anything else you want to remember"></textarea></label>
+        <div class="workspace-actions"><button class="primary-btn" type="submit">Save my notes ✓</button><button class="secondary-btn" type="button" id="clearVault">Clear my notes</button></div>
+      </form>
+    </section>
+
+    <section class="workspace-section section-wrap" id="thoughts">
+      <div class="section-heading">
+        <div><div class="eyebrow">THE CREW'S OPEN NOTEBOOK</div><h2>Cosmic <span>Thoughts.</span></h2></div>
+        <p>Share a thought, lesson, or idea.<br>Maximum 300 words per post.</p>
+      </div>
+      <div class="privacy-note">Posts in this prototype are saved in this browser only—not synced between phones or computers. Anyone using this browser can read them. Keep posts respectful and avoid private information.</div>
+      <div id="thoughtComposerLocked" class="workspace-panel"><p>Log in with your crew name to publish a thought.</p><button class="primary-btn" type="button" id="thoughtLoginBtn">Crew Login ↗</button></div>
+      <form id="thoughtForm" class="workspace-panel" hidden>
+        <div class="workspace-title"><div><div class="eyebrow">POST AS <span id="thoughtAuthor">CREW MEMBER</span></div><h3>What's on your mind?</h3></div><span class="word-count" id="wordCount">0 / 300 words</span></div>
+        <textarea id="thoughtText" maxlength="3000" rows="5" placeholder="Share your thought with the crew…" required></textarea>
+        <div class="workspace-actions"><button class="primary-btn" type="submit">Publish thought ↗</button></div>
+        <div class="form-error" id="thoughtError" role="status"></div>
+      </form>
+      <div id="thoughtFeed" class="thought-feed" aria-live="polite"></div>
+    </section>
+
+    <section class="quote-section section-wrap" id="about">
+      <div class="quote-star">✦</div>
+      <div class="eyebrow">OUR UNIVERSE, OUR RULES</div>
+      <h2>Built by curiosity.<br><span>Powered by friendship.</span></h2>
+      <p>We may be devastated by assignments, deadlines, and silly mistakes—but the mission keeps going. The universe is huge, and so are the possibilities.</p>
+      <div class="quote-signature">— DEVASTATED ENGINEERS</div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#home"><span class="brand-mark">✦</span> DE<span class="brand-dot">.</span></a><span>MADE OF STARDUST & DEADLINES</span><a href="#home">BACK TO TOP ↑</a></footer>
+
+  <div class="modal-backdrop" id="loginModal" aria-hidden="true">
+    <div class="modal login-modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button class="modal-close" id="closeLogin" aria-label="Close">×</button>
+      <div class="modal-icon">✦</div><div class="eyebrow">IDENTIFY YOURSELF</div>
+      <h2 id="loginTitle">Welcome, <span>crew member.</span></h2>
+      <p>Enter your name in CAPITAL LETTERS to open your crew profile.</p>
+      <form id="loginForm">
+        <label for="memberName">YOUR FULL NAME</label>
+        <input id="memberName" name="memberName" placeholder="E.G. ANTU NANDY" autocomplete="name" required>
+        <button class="primary-btn full-btn" type="submit">Enter the universe ↗</button>
+        <div class="form-error" id="loginError" role="status"></div>
+      </form>
+      <small>Demo login: this checks the name in your browser; it is not secure authentication.</small>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="profileModal" aria-hidden="true">
+    <div class="modal profile-modal" role="dialog" aria-modal="true" aria-labelledby="profileName">
+      <button class="modal-close" id="closeProfile" aria-label="Close">×</button>
+      <div id="profileContent"></div>
+    </div>
+  </div>
+
+ <!-- Background Music Player -->
+<div class="music-player">
+    <audio id="bgMusic" loop>
+        <source src="anthem.mpeg" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
+    <button id="musicToggle" type="button">
+        🎵 Play Music
+    </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
